@@ -1,0 +1,23 @@
+{
+  "name": "ielts-countdown-widget",
+  "version": "1.0.0",
+  "description": "Premium IELTS Countdown Widget for Windows 11",
+  "main": "main.js",
+  "author": "Jo'rabek",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.ielts.widget",
+    "productName": "IELTS Countdown Widget",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
