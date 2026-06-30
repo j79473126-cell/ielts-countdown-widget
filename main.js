@@ -20,7 +20,8 @@ function createWindow() {
     skipTaskbar: false,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      backgroundThrottling: false
     }
   });
 
