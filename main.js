@@ -3,7 +3,6 @@ const path = require("path");
 
 function createWindow() {
   const { width: screenWidth } = screen.getPrimaryDisplay().workAreaSize;
-
   const winWidth = 360;
   const winHeight = 360;
   const margin = 20;
@@ -15,7 +14,7 @@ function createWindow() {
     y: margin,
     frame: false,
     transparent: true,
-    alwaysOnTop: true,
+    alwaysOnTop: false,
     resizable: false,
     movable: true,
     skipTaskbar: false,
@@ -24,10 +23,6 @@ function createWindow() {
       contextIsolation: false
     }
   });
-
-  // Keep it only above desktop icons, NOT above other app windows
-  win.setAlwaysOnTop(true, "desktop");
-  win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
 
   win.loadFile("index.html");
 }
