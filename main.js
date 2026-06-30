@@ -25,8 +25,9 @@ function createWindow() {
     }
   });
 
-  win.setAlwaysOnTop(true, "screen-saver");
-  win.setVisibleOnAllWorkspaces(true);
+  // Keep it only above desktop icons, NOT above other app windows
+  win.setAlwaysOnTop(true, "desktop");
+  win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
 
   win.loadFile("index.html");
 }
