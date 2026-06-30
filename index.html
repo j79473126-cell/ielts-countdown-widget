@@ -6,30 +6,64 @@
 <title>IELTS Countdown</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="widget">
 
-<div class="title">
-🎯 IELTS
-</div>
+  <div class="header">
+    <div class="brand">
+      <span class="logo">🎯</span>
+      <span class="brand-name">IELTS</span>
+    </div>
+    <div class="menu-dots">⋮</div>
+  </div>
 
-<div id="days">
-Loading...
-</div>
+  <div class="exam-date" id="examDate">15 September 2026</div>
 
-<div id="time">
-Loading...
-</div>
+  <div class="main-row">
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 140 140">
+        <circle class="ring-bg" cx="70" cy="70" r="62"></circle>
+        <circle class="ring-progress" id="ringProgress" cx="70" cy="70" r="62"></circle>
+      </svg>
+      <div class="ring-center">
+        <div class="days-number" id="days">--</div>
+        <div class="days-label">DAYS LEFT</div>
+      </div>
+    </div>
 
-<div class="date">
-15 September 2026
-</div>
+    <div class="time-grid">
+      <div class="time-block">
+        <div class="time-value" id="hours">00</div>
+        <div class="time-label">HOURS</div>
+      </div>
+      <div class="time-sep">:</div>
+      <div class="time-block">
+        <div class="time-value" id="minutes">00</div>
+        <div class="time-label">MINUTES</div>
+      </div>
+      <div class="time-sep">:</div>
+      <div class="time-block">
+        <div class="time-value" id="seconds">00</div>
+        <div class="time-label">SECONDS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="motivation" id="motivation">⭐ Keep going, you're doing great!</div>
+
+  <div class="progress-section">
+    <div class="progress-label-row">
+      <span>Preparation Progress</span>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+  </div>
 
 </div>
 
 <script src="renderer.js"></script>
-
 </body>
 </html>
